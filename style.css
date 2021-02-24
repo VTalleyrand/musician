@@ -64,7 +64,7 @@ nav #logo {
 }
 
 .bio-container {
-  background-image: url(/img/musician/musicianBiobg.png);
+  background-image: url(/img/musicianBiobg.png);
   background-position: cover;
   display: flex;
   align-items: center;
