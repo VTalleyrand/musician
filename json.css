@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 140rem;
+  background-color: black;
+}
+
+.nav-container {
+  background-color: #d69a00;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 3%;
+  font-size: 0.5rem;
+  padding-left: 1rem;
+  height: 4rem;
+}
+
+nav p {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  padding-left: 1.6rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav #logo {
+  width: 3rem;
+}
+
+.bio-container,
+.news-container,
+.gallery-container,
+.tour-container {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bio-container {
+  background-image: url(/img/musician/musicianBiobg.png);
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  color: #bebebe;
+}
+
+.bio-container p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding: 0rem 2rem;
+  max-width: 36rem;
+}
+
+.news-container {
+  background-image: url(/img/musician/musiciannewsbg.png.jpeg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.news-box {
+  width: 24rem;
+  height: 40rem;
+  background-color: #d69a00;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 7rem 1.6rem;
+  position: relative;
+}
+.date {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.news-b1 {
+}
+.news-b2 {
+  display: none;
+}
+.news-b3 {
+  display: none;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-images {
+  width: 80vw;
+  max-width: 120rem;
+  padding: 2rem 0rem;
+}
+
+.tour-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-tours {
+  background-color: #d69a00;
+  width: 100vw;
+  min-width: 10rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-date {
+  font-size: 0.7rem;
+}
+
+.tour-venue {
+  font-size: 0.9rem;
+}
+
+.tour-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.tour-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-container {
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-input {
+  color: white;
+  background-color: black;
+  width: 95vw;
+  max-width: 60rem;
+  border: 0.1rem solid #d69a00;
+  margin-bottom: 2.5rem;
+}
+
+.contact-name,
+.contact-email {
+  height: 4rem;
+}
+
+textarea {
+  height: 30rem;
+  width: 95vw;
+  color: white;
+  background-color: black;
+  max-width: 60rem;
+  max-height: 40rem;
+  border: 0.1rem solid #d69a00;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  color: white;
+  background-color: black;
+  max-width: 60rem;
+  border: 0.1rem solid #d69a00;
+  margin-bottom: 2rem;
+  padding: 0.7rem;
+  position: absolute;
+  bottom: -5rem;
+  right: 0rem;
+}
+
+footer {
+  background-color: #d69a00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+}
+
+@media screen and (min-width: 600px) {
+  .news-b2 {
+    display: inherit;
+  }
+
+  .all-tours {
+    max-width: 60rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 8%;
+  }
+
+  nav p {
+    color: white;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  nav li {
+    padding-left: 5rem;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  .bio-container,
+  .news-container,
+  .gallery-container,
+  .contact-container .bio-container {
+    min-height: 100vh;
+    max-height: 150vh;
+  }
+  nav #logo {
+    width: 5rem;
+  }
+  .news-b3 {
+    display: inherit;
+  }
+}
