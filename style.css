@@ -96,7 +96,13 @@ nav #logo {
   font-size: 1.4rem;
   padding: 7rem 1.6rem;
   position: relative;
+  transition: transform .2s ease-in-out;
 }
+.news-box:hover {
+    transform: translateY(-1.2rem) scale(1.05);
+    opacity:1;
+    }
+
 .date {
   position: absolute;
   bottom: 1rem;
