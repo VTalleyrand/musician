@@ -223,13 +223,20 @@ textarea {
   right: 0rem;
 }
 
+
 footer {
-  background-color: #d69a00;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 12rem;
-}
+        background-color: #d69a00;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 12rem;
+      }
+
+      footer a {
+          color: white;
+          text-decoration: none;
+      }
 
 @media screen and (min-width: 600px) {
   .news-b2 {
