@@ -277,6 +277,11 @@ footer {
 }
 
 @media screen and (max-width: 60rem) {
+  
+  body {
+  margin: initial;
+}
+  
   nav .logo {
     font-size: 2rem;
     line-height: 2rem;
@@ -284,7 +289,7 @@ footer {
 
   nav {
     height: 8rem;
-    padding: 0 5rem;
+    padding: 0 2rem;
     font-size: 1.5rem;
   }
 
@@ -292,6 +297,8 @@ footer {
     padding-left: 3rem;
     transition: all 500ms ease-out;
   }
+  
+  
 
   .news-b3 {
     display: none;
