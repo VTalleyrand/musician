@@ -14,7 +14,6 @@ html {
 body {
   margin: auto;
   max-width: 165rem;
-  min-width: 32rem;
   background-color: black;
   color: white;
 }
