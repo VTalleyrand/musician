@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,76 +8,94 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Roboto' sans-serif;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   margin: auto;
-  max-width: 140rem;
+  max-width: 165rem;
+  min-width: 32rem;
   background-color: black;
+  color: white;
 }
 
 .nav-container {
-  background-color: #d69a00;
+  background-color: #7c5c0c;
+  /* position: sticky;
+  top: 0; */
+  z-index: 3;
+  font-family: 'Bebas Neue' sans-serif;
+}
+
+nav .logo {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 2.5rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 1.5rem 3%;
-  font-size: 0.5rem;
-  padding-left: 1rem;
-  height: 4rem;
-}
-
-nav p {
-  color: white;
+  height: 8rem;
+  padding: 0 5rem;
+  font-size: 1.7rem;
 }
 
 nav ul {
   display: flex;
-  list-style-type: none;
-}
-
-nav li {
-  padding-left: 1.6rem;
+  list-style: none;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  padding-left: 5rem;
+  transition: all 500ms ease-out;
 }
 
-nav #logo {
-  width: 3rem;
+nav a:hover {
+  color: rgba(0, 0, 0, 0.404);
 }
 
 .bio-container,
-.news-container,
-.gallery-container,
-.tour-container {
+.news-container {
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 80rem;
 }
 
 .bio-container {
-  background-image: url(/img/musicianBiobg.png);
-  background-position: cover;
+  background-image: url(/img/musician/musicianBiobg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   color: #bebebe;
 }
 
 .bio-container p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.4;
   padding: 0rem 2rem;
-  max-width: 36rem;
+  padding-left: 4rem;
+  max-width: 50rem;
+  animation: bioreveal 3s ease-in-out;
+}
+
+.bio-container span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7c5c0c;
+}
+
+.titles {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Bebas Neue' sans-serif;
+  padding: 2rem 0rem;
 }
 
 .news-container {
@@ -83,12 +103,14 @@ nav #logo {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .news-box {
   width: 24rem;
   height: 40rem;
-  background-color: #d69a00;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 2rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -96,12 +118,15 @@ nav #logo {
   font-size: 1.4rem;
   padding: 7rem 1.6rem;
   position: relative;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
+
 .news-box:hover {
-    transform: translateY(-1.2rem) scale(1.05);
-    opacity:1;
-    }
+  transform: translateY(-1.2rem) scale(1.1);
+  opacity: 1;
+}
 
 .date {
   position: absolute;
@@ -109,25 +134,24 @@ nav #logo {
   right: 2rem;
 }
 
-.news-b1 {
-}
-.news-b2 {
-  display: none;
-}
-.news-b3 {
-  display: none;
-}
-
 .gallery-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  min-height: initial;
 }
 
-.gallery-images {
-  width: 80vw;
-  max-width: 120rem;
-  padding: 2rem 0rem;
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  opacity: 0.75;
+  transition: all 0.2s ease-in-out;
+}
+
+.gallery-container img:hover {
+  opacity: 1;
+  transform: scale(1.01);
 }
 
 .tour-container {
@@ -138,19 +162,20 @@ nav #logo {
 }
 
 .all-tours {
-  background-color: #d69a00;
-  width: 100vw;
+  background-color: #7c5c0c;
+  width: 80%;
   min-width: 10rem;
   height: 5rem;
   margin-bottom: 2rem;
   padding: 0rem 1rem;
+  border-radius: 0.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .tour-date {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .tour-venue {
@@ -161,9 +186,13 @@ nav #logo {
   background-color: black;
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border-radius: 0.2rem;
   font-size: 0.9rem;
+}
+
+.tour-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .tour-button a {
@@ -191,8 +220,10 @@ nav #logo {
   background-color: black;
   width: 95vw;
   max-width: 60rem;
-  border: 0.1rem solid #d69a00;
+  border: 0.2rem solid #7c5c0c;
   margin-bottom: 2.5rem;
+  border-radius: 0.3rem;
+  outline: none;
 }
 
 .contact-name,
@@ -206,84 +237,63 @@ textarea {
   color: white;
   background-color: black;
   max-width: 60rem;
-  max-height: 40rem;
-  border: 0.1rem solid #d69a00;
+  border: 0.2rem solid #7c5c0c;
   margin-bottom: 2rem;
+  resize: none;
+  border-radius: 0.3rem;
+  outline: none;
 }
 
 .contact-button {
   color: white;
   background-color: black;
   max-width: 60rem;
-  border: 0.1rem solid #d69a00;
+  border: 0.2rem solid #7c5c0c;
   margin-bottom: 2rem;
   padding: 0.7rem;
   position: absolute;
   bottom: -5rem;
   right: 0rem;
+  border-radius: 0.3rem;
 }
-
 
 footer {
-        background-color: #d69a00;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 12rem;
-      }
+  background-color: #7c5c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+}
 
-      footer a {
-          color: white;
-          text-decoration: none;
-      }
-
-@media screen and (min-width: 600px) {
-  .news-b2 {
-    display: inherit;
+@keyframes bioreveal {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
   }
 
-  .all-tours {
-    max-width: 60rem;
+  to {
+    opacity: 1;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 60rem) {
+  nav .logo {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.5rem 8%;
-  }
-
-  nav p {
-    color: white;
-  }
-
-  nav ul {
-    display: flex;
-    list-style-type: none;
-  }
-
-  nav li {
-    padding-left: 5rem;
+    height: 8rem;
+    padding: 0 5rem;
+    font-size: 1.5rem;
   }
 
   nav a {
-    color: white;
-    text-decoration: none;
+    padding-left: 3rem;
+    transition: all 500ms ease-out;
   }
-  .bio-container,
-  .news-container,
-  .gallery-container,
-  .contact-container .bio-container {
-    min-height: 100vh;
-    max-height: 150vh;
-  }
-  nav #logo {
-    width: 5rem;
-  }
+
   .news-b3 {
-    display: inherit;
+    display: none;
   }
 }
