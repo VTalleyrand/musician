@@ -135,7 +135,7 @@ nav a:hover {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   min-height: initial;
