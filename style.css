@@ -49,11 +49,12 @@ nav a {
   color: white;
   text-decoration: none;
   padding-left: 5rem;
-  transition: all 2000ms ease-out;
+  
 }
 
 nav a:hover {
   color: rgba(0, 0, 0, 0.404);
+  transition: all 500ms ease-out;
 }
 
 .bio-container,
