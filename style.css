@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Roboto' sans-serif;
+  font-family: serif;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   /* position: sticky;
   top: 0; */
   z-index: 3;
-  font-family: 'Bebas Neue' sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 nav .logo {
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 .bio-container {
-  background-image: url(/img//musicianBiobg.png);
+  background-image: url(/img/musician/musicianBiobg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,12 +94,12 @@ nav a:hover {
 .titles {
   text-align: center;
   font-size: 4rem;
-  font-family: 'Bebas Neue' sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   padding: 2rem 0rem;
 }
 
 .news-container {
-  background-image: url(/img/musiciannewsbg.png.jpeg);
+  background-image: url(/img/musician/musiciannewsbg.png.jpeg);
   display: flex;
   justify-content: space-around;
   align-items: center;
