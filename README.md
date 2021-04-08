@@ -1,1 +1,3 @@
-First full site..
+A site for a guitarist.
+
+technology: html, css
